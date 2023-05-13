@@ -3,7 +3,7 @@ displayName: Skywalking Plugin
 # 插件类型，目前版本只支持 middleware
 type: middleware
 # 插件导入路径
-import: github.com/traefik/skywalkingplugin
+import: github.com/Alpha-yhma/skywalkingplugin
 # 插件简介
 summary: DEMO
 # 配置数据
