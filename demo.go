@@ -3,7 +3,6 @@ package skywalkingplugin
 import (
 	"context"
 	"fmt"
-	"github.com/rs/xid"
 	"net/http"
 	"time"
 )
@@ -39,5 +38,5 @@ func New(_ context.Context, next http.Handler, config *Config, name string) (htt
 func (a *Demo) ServeHTTP(rw http.ResponseWriter, req *http.Request) {
 	before := time.Now()
 	a.next.ServeHTTP(rw, req)
-	fmt.Printf("traceId: %s, 请求URL: %s, 耗时: %s\n", xid.New().String(), req.URL.Path, time.Since(before))
+	fmt.Printf("请求URL: %s, 耗时: %s\n", req.URL.Path, time.Since(before))
 }
